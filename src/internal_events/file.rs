@@ -187,7 +187,7 @@ mod source {
 
     impl<'a> InternalEvent for FileChecksumFailed<'a> {
         fn emit(self) {
-            warn!(
+            debug!(
                 message = "Currently ignoring file too small to fingerprint.",
                 file = %self.file.display(),
             );
